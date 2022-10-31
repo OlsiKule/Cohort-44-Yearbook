@@ -80,7 +80,7 @@ function App() {
       <h1>Cohort #44 Yearbook</h1>
       <img src={image} alt="" />
       {/* I want to be able to add a comments  */}
-      <h2></h2>
+      {/* <h2></h2> */}
       <div className="form">
         <form action="submit">
           <label htmlFor="comment">Your comments </label>
