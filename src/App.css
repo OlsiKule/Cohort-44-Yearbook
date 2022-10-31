@@ -37,9 +37,14 @@
 }
 
 img {
-  max-width: 100%;
-  width: 500px;
-  height: 300px;
+  width: 100%;
+  width: 800px;
+  height: 520px;
+  border: 15px yellowgreen groove;
+  object-fit: cover;
+  /* padding: -10px; */
+  margin-bottom: 30px;
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
 }
 
 ul {
