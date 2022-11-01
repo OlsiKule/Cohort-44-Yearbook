@@ -23,7 +23,7 @@ function App() {
     const databaseRef = ref(database);
     // grabbing the info from our database
     onValue(databaseRef, (response) => {
-      // createing a array to store our data
+      // creating an array to store our data
       const newState = [];
       // storing the returned data as a variable
       const data = response.val();
