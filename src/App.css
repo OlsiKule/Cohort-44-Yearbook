@@ -53,7 +53,7 @@ ul {
 li {
   /* width: calc(53% - 20px); */
   width: 40%;
-  border: 5px #f1356d ridge;
+  border: 5px #29b8a6 ridge;
   margin: 20px 20px;
   display: flex;
   flex-direction: column;
@@ -62,6 +62,7 @@ li {
   padding: 10px ;
   border-radius: 40% 0% / 30% 50%;
   background-color: #ddd;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 li p{
   margin: 8px 0;

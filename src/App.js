@@ -72,7 +72,11 @@ function App() {
     setNameInput("");
   };
 
-  // const sequence = Math.floor(Math.random() * 4);
+// prevent empty submitions 
+
+
+
+
   // console.log(sequence);
 
   return (
@@ -83,7 +87,7 @@ function App() {
       {/* <h2></h2> */}
       <div className="form">
         <form action="submit">
-          <label htmlFor="comment">Comments </label>
+          <label htmlFor="comment" >Comments </label>
           <textarea
             cols={70}
             rows={5}
