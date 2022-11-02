@@ -9,9 +9,10 @@ import Comment from "./Comment";
 
 // this is a component not a fxn
 function App() {
-  // this state will track comments from our database
 
+  // this state will track comments from our database
   const [comments, setComments] = useState([]);
+  
   // this state will track user inputs from the form
   const [commentInput, setCommentInput] = useState("");
   const [nameInput, setNameInput] = useState("");
