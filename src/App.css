@@ -60,15 +60,16 @@ li {
   align-items: flex-start;
   justify-content: center;
   padding: 10px ;
-  border-radius: 50% 20% / 10% 40%;
-  /* border-radius: 10px; */
+  border-radius: 40% 0% / 30% 50%;
+  background-color: #ddd;
 }
 li p{
-  font-style: italic;
   margin: 8px 0;
+  padding: 10px 10px;
 }
 
 li span{
+  font-style: italic;
   font-size: 18px;
   margin: 8px 0;
 }

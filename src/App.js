@@ -60,8 +60,8 @@ function App() {
     // preventing the default action of the form
     const database = getDatabase(firebaseConfig);
     const databaseRef = ref(database);
-    console.log(typeof commentInput);
-    console.log(nameInput);
+    // console.log(typeof commentInput);
+    // console.log(nameInput);
     push(databaseRef, {
       comment: commentInput,
       name: nameInput,
@@ -83,7 +83,7 @@ function App() {
       {/* <h2></h2> */}
       <div className="form">
         <form action="submit">
-          <label htmlFor="comment">Your comments </label>
+          <label htmlFor="comment">Comments </label>
           <textarea
             cols={70}
             rows={5}
@@ -93,7 +93,7 @@ function App() {
             onChange={handleCommentChange}
             value={commentInput}
           />
-          <label htmlFor="name">name </label>
+          <label htmlFor="name">Name </label>
           <input
             className="userName"
             id="comment"
