@@ -1,5 +1,4 @@
 function Comment(props) {
-  console.log("this is props concatatnated", props);
   return (
     <li>
       <p>{props.name}</p>

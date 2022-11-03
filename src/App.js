@@ -10,9 +10,9 @@ import Comment from "./Comment";
 // this is a component not a fxn
 function App() {
 
-  // this state will track comments from our database
+  // this state will track comments from our database/firebase
   const [comments, setComments] = useState([]);
-  
+
   // this state will track user inputs from the form
   const [commentInput, setCommentInput] = useState("");
   const [nameInput, setNameInput] = useState("");
@@ -28,8 +28,6 @@ function App() {
       const newState = [];
       // storing the returned data as a variable
       const data = response.val();
-      // console.log(data)
-      console.log("data", data);
       // loop through the return object
       for (let key in data) {
         const { comment, name } = data[key];
@@ -61,11 +59,10 @@ function App() {
     // preventing the default action of the form
     const database = getDatabase(firebaseConfig);
     const databaseRef = ref(database);
-    // console.log(typeof commentInput);
-    // console.log(nameInput);
     push(databaseRef, {
       comment: commentInput,
       name: nameInput,
+      // will work on the like button at a later time 
       likes: 0,
     });
     // push(databaseRef, nameInput)
@@ -78,7 +75,6 @@ function App() {
 
 
 
-  // console.log(sequence);
 
   return (
     <div className="App">
@@ -131,3 +127,5 @@ function App() {
 
 export default App;
 
+// be comfortable with your skillsets 
+// the need to working full time  
