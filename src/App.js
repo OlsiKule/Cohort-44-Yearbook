@@ -9,7 +9,6 @@ import Comment from "./Comment";
 
 // this is a component not a fxn
 function App() {
-
   // this state will track comments from our database/firebase
   const [comments, setComments] = useState([]);
 
@@ -59,22 +58,20 @@ function App() {
     // preventing the default action of the form
     const database = getDatabase(firebaseConfig);
     const databaseRef = ref(database);
-    push(databaseRef, {
-      comment: commentInput,
-      name: nameInput,
-      // will work on the like button at a later time 
-      likes: 0,
-    });
-    // push(databaseRef, nameInput)
-    setCommentInput("");
-    setNameInput("");
+    if (commentInput !== "" && nameInput !== "") {
+      push(databaseRef, {
+        comment: commentInput,
+        name: nameInput,
+        // will work on the like button at a later time
+        likes: 0,
+      });
+      // push(databaseRef, nameInput)
+      setCommentInput("");
+      setNameInput("");
+    }
   };
 
-// prevent empty submitions 
-
-
-
-
+  // prevent empty submitions
 
   return (
     <div className="App">
@@ -84,7 +81,7 @@ function App() {
       {/* <h2></h2> */}
       <div className="form">
         <form action="submit">
-          <label htmlFor="comment" >Comments </label>
+          <label htmlFor="comment">Comments </label>
           <textarea
             cols={70}
             rows={5}
@@ -108,15 +105,13 @@ function App() {
         <ul className="postedComments">
           {comments.map((comment) => {
             return (
-                <Comment 
-                  
-                  key={comment.id}
-                  name={comment.name}
-                  text={comment.comment}
-                  removeComment={handleRemoveComment}
-                  id={comment.id}
-                />
-              
+              <Comment
+                key={comment.id}
+                name={comment.name}
+                text={comment.comment}
+                removeComment={handleRemoveComment}
+                id={comment.id}
+              />
             );
           })}
         </ul>
@@ -127,5 +122,5 @@ function App() {
 
 export default App;
 
-// be comfortable with your skillsets 
-// the need to working full time  
+// be comfortable with your skillsets
+// the need to working full time

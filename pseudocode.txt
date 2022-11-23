@@ -1,0 +1,80 @@
+
+Project Description: 
+// - create a sequence of bottons that the user will try to follow in  exact  order. The game prompts the user for name and locks/saves the score of the game. Immitation of the popular childrens game simons says 
+
+// MVP: 
+// - Create a button for starting the game 
+    - generate a random event 
+      - random number stored in an array
+      - add more numbers to the array with push()
+      - stop at a predetermined set number 
+// - Have a display of 4 colored buttons that change color on every randomly  
+    - combine each number to a colour 
+    - when sequence of numbers from array is called 
+      a) play at a slow speed of 0.5 sec per number 
+      b) much number to colour 
+      c) make the colour brighter on screen
+// - Prompt the user for their name and save score in firebase
+// - Show the score of the current game
+// - Show the highest score and the players name  
+
+// Stretch Goals: 
+// 1. Have each button play a musical note or sound 
+// 2. Increase the difficulty of the game with longer sequence of buttons 
+// 3. Change background on every round 
+
+// Pseudo Code: 
+
+// Components
+// 1. - play button 
+   2. - circle divided in four parts
+   3. - firebase
+   4. - display score
+
+ Play button
+//  - activate useState to watch for game at start 
+
+        
+
+// 2. Circle (colored buttons)
+//  - generate a random sequence of numbers with math.random() fxn 
+//  - use useEffect to store initial sequence of numbers in an array
+    - when sequence of numbers ends activate useState to watch each button 
+
+//     - display sequence by changing colors of buttons 
+//     - use ternary to comparate stored sequence with the player's choices 
+//     - if correct choice continue game 
+       - else change useState   
+
+// 3. Score display
+//   - display score for the ongoing game 
+//   - update score during the game based on players choice  
+//   - show 5 highest previous players score
+
+// 4. Scores
+// - display score of player
+// - prompt player to for their name 
+// - safe score in firebase in value key pair name:score
+        
+// Stretch Goals Pseudo Code
+// - provide option for different levels easy/medium/hard 
+
+// 1. Firebase 
+//     - config details for firebase 
+
+
+
+this is for the remove button 
+<ul>
+{
+  scores.map((score) => {
+    return (
+      <li key={score.key}>
+      <p>{ score.name } </p>
+      {/* I want to be able to remove a score */}
+      <button onClick={() => {handleRemoveBook(score.key)}}>Remove</button>
+    </li>
+    )
+  })
+}
+</ul>
