@@ -36,7 +36,7 @@ function App() {
     });
   }, []);
 
-  // creating a fxn that takes care of the update input logic
+  // creating a fxn that takes care of the update input logic 
   const handleCommentChange = (event) => {
     setCommentInput(event.target.value);
   };
@@ -52,7 +52,7 @@ function App() {
     remove(databaseRef);
   };
 
-  // creating the fxn that subits the value to firebase
+  // creating the fxn that submits the value to firebase
   const handleFormSubmit = (event) => {
     event.preventDefault();
     // preventing the default action of the form
@@ -71,7 +71,7 @@ function App() {
     }
   };
 
-  // prevent empty submitions
+  // prevent empty submitions  
 
   return (
     <div className="App">
